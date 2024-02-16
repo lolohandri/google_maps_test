@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {GoogleMap, Marker, useGoogleMap} from '@react-google-maps/api';
+import {GoogleMap, Marker} from '@react-google-maps/api';
 
 const containerStyle = {
     width: '100%',
@@ -18,7 +18,6 @@ const Map = ({center, markers, setMarkers}) => {
     }, []);
 
     const [markerId, setMarkerId] = useState(0);
-    const map = useGoogleMap()
 
     const onMapClick = (e) => {
         setMarkers((current) => [
